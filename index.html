@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <h1>Berkay Vuranok'un müzik çaları</h1>
+        <div class="player">
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+                <button id="play-btn">Başlat</button>
+                <button id="pause-btn" disabled>Durdur</button>
+                <input type="range" id="seek-bar" value="0" step="1" min="0" max="100">
+                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                <input type="file" id="upload" accept="audio/*">
+            </div>
+            <div class="playlist">
+                <ul id="playlist"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
